@@ -17,7 +17,7 @@ const Stripe = () => {
 
   const { tid } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:8080/ticket/${tid}`).then((result) => {
+    fetch(`https://pf-backend-d7xh.onrender.com/ticket/${tid}`).then((result) => {
       result.json().then((json) => {
         console.log(json.ticket);
         setCurrentProducts(json.ticket.products);
@@ -65,7 +65,7 @@ const Stripe = () => {
           id="home"
           className="btn btn-outline-secondary mx-2"
           onClick={() =>
-            window.location.replace(`http://localhost:8080/productos`)
+            window.location.replace(`https://pf-backend-d7xh.onrender.com/productos`)
           }
         >
           Home
