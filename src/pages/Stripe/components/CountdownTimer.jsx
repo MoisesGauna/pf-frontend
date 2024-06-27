@@ -23,7 +23,7 @@ const CountdownTimer = ({ tid }) => {
               "error",
               "Tiempo expirado",
               "Se ha acabado el tiempo para realizar su compra.",
-              () => window.location.replace(`http://localhost:8080/products`)
+              () => window.location.replace(`https://pf-backend-d7xh.onrender.com/products`)
             );
           } else {
             updatedMinutes -= 1;
@@ -41,7 +41,7 @@ const CountdownTimer = ({ tid }) => {
 
   const handleTimerEnd = async () => {
     try {
-      await fetch(`http://localhost:8080/api/carts/delete-ticket/${tid}`, {
+      await fetch(`https://pf-backend-d7xh.onrender.com/api/carts/delete-ticket/${tid}`, {
         method: "DELETE",
       });
     } catch (error) {
